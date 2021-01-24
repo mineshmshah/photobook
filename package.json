@@ -69,5 +69,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "prettier": "./prettier/index.json"
 }
