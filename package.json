@@ -15,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "yarn lint-css && yarn lint-code --max-warnings 0 && yarn lint-style -c",
+    "lint-css": "stylelint 'packages/**/*.{ts,tsx}'",
+    "lint-code": "eslint 'packages/**/*.{js,ts,tsx}'",
+    "lint-style": "yarn prettier 'packages/**/*.{js,ts,tsx,json,md,yml}'"
   },
   "eslintConfig": {
     "extends": [
@@ -33,6 +37,37 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./packages/**/*.{js}": [
+      "stylelint",
+      "eslint --fix --max-warnings 0",
+      "prettier --write",
+      "git add"
+    ],
+    "./**/*.{json,md,yml}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
