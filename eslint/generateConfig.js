@@ -7,7 +7,12 @@ module.exports = ({  nodePaths = undefined } = {}) => ({
     // 'plugin:jest/recommended',
     // 'plugin:jest/style',
     'prettier',
+    "eslint:recommended",
+    "plugin:react/recommended",
   ],
+  env: {
+    "browser": true
+  },
   rules: {
     ...importRules,
     // ...jestRules,

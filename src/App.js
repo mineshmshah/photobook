@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { createServer } from 'miragejs';
+import { jsonData } from './db/MOCK_DATA';
+import { getData, sortData } from './store/actions/actions';
+import { Table } from './components/Table';
+import { Sorting } from './components/Sorting';
 
-function App() {
+createServer({
+  routes() {
+    this.get('/api/data', () => jsonData);
+  },
+});
+
+export const App = () => {
+  const sortingInfo = useSelector((state) => state.sorting);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getData());
+  }, []);
+
+  useEffect(() => {
+    console.log(sortingInfo);
+    dispatch(sortData());
+  }, [sortingInfo]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Sorting />
+      <Table />
     </div>
   );
-}
-
-export default App;
+};
