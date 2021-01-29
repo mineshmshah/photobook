@@ -11,7 +11,7 @@ import {
 } from './Table.styles';
 
 export const Table = () => {
-  const data = useSelector((state) => state.data.value);
+  const data = useSelector((state) => state.filter.filteredData);
 
   return (
     <TableBlock>

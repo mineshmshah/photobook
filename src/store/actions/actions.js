@@ -5,6 +5,7 @@ import {
   UPDATE_SORT_METHOD,
   UPDATE_SORT_ORDER,
   SORT_DATA,
+  FILTER_RESULTS
 } from './types';
 
 export const getDataRequest = () => ({
@@ -43,3 +44,9 @@ export const updateSortOrder = (payload) => ({
 export const sortData = () => ({
   type: SORT_DATA,
 });
+
+export const filterData = (firstName, lastName) => ({
+  type: FILTER_RESULTS,
+  firstName,
+  lastName
+})
