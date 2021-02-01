@@ -14,18 +14,10 @@ createServer({
 });
 
 export const App = () => {
-  // const sortingInfo = useSelector((state) => state.sorting);
-  // const filterFirstName = useSelector((state) => state.filter.firstName);
-  // const filterLastName = useSelector((state) => state.filter.lastName);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
   }, []);
-
-  // useEffect(() => {
-  //   console.log(sortingInfo);
-  //   dispatch(sortData());
-  // }, [sortingInfo, filterFirstName, filterLastName]);
 
   return (
     <div>
