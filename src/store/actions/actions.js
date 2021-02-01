@@ -4,8 +4,7 @@ import {
   GET_DATA_FAILURE,
   UPDATE_SORT_METHOD,
   UPDATE_SORT_ORDER,
-  SORT_DATA,
-  FILTER_RESULTS
+  FILTER_RESULTS,
 } from './types';
 
 export const getDataRequest = () => ({
@@ -41,12 +40,8 @@ export const updateSortOrder = (payload) => ({
   payload,
 });
 
-export const sortData = () => ({
-  type: SORT_DATA,
-});
-
 export const filterData = (firstName, lastName) => ({
   type: FILTER_RESULTS,
   firstName,
-  lastName
-})
+  lastName,
+});

@@ -16,6 +16,8 @@ module.exports = ({  nodePaths = undefined } = {}) => ({
   rules: {
     ...importRules,
     // ...jestRules,
+        "no-unused-vars": "warn",
+    "react/prop-types": "warn"
   },
   settings: {
     parserOptions: {
