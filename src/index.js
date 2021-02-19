@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import SimpleReactLightbox from 'simple-react-lightbox';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { configureStore } from './store/index';
@@ -9,7 +10,9 @@ const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+          <SimpleReactLightbox>      
+            <App /> 
+          </SimpleReactLightbox> 
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
