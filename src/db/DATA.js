@@ -476,7 +476,7 @@ export const jsonData = [
   ],
   [
           {
-        header: 'A few warm words...',
+        header: 'A few warm',
         type: 'Message',
         media: ['https://drive.google.com/file/d/1LJFDCLWee4pRsUk8UBEQ-d8gsfO9_Y3q/view?usp=sharing'],
         page: 5,
@@ -549,7 +549,28 @@ export const jsonData = [
     },
   ],[
           {
-        header: 'And now a spoecial video...',
+        header: 'A few fun facts about you from some mfaily...',
+        type: 'Message',
+        media: ['https://drive.google.com/file/d/1-oRkqxny14JVgQ7RLkgm2uu2-fPmbu-y/view?usp=sharing'],
+        page: 5,
+        detail: 'slideshow',
+        backgroundColor: "#a5d496",
+        message: "to view thos message click ",
+        link: true
+    },
+        
+    {
+        type: 'Message',
+        header: '... and now for the main course!',
+        media:[],
+        page: 6,
+        detail: 'messsages',
+        backgroundColor: "#e4d3be"
+    },
+  ],
+  [
+          {
+        header: 'And now a special video...',
         type: 'Message',
         media: ['https://drive.google.com/file/d/1BixiiQ9OS9LduoubTDVCM_GENPGKfGZS/view?usp=sharing'],
         page: 5,
