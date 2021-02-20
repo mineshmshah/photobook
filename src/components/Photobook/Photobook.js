@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Gallery } from '../Gallery'
 import { Message } from '../Message'
 import { jsonData } from '../../db/DATA'
-import { Container, MainContainer, Page } from './Photobook.styles'
 import { Pagination } from '../Pagination'
+import { Container, MainContainer, Page } from './Photobook.styles'
 
  
 export const Photobook = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const pageData = jsonData[currentPage]
-  console.log(pageData)
   return (
     <Container>
     <Pagination  totalCount={jsonData.length} currentPage={currentPage} setCurrentPage={setCurrentPage}/>  

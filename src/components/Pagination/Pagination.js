@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, PaginationContainer } from './Pagination.styles';
 
 
+// eslint-disable-next-line react/prop-types
 export const Pagination = ({currentPage, totalCount, setCurrentPage }) => {
       const goToNextPage = () => currentPage + 1 <= totalCount ? setCurrentPage(currentPage + 1) : null
       const goToPreviousPage =()=> currentPage - 1 >= 1 ? setCurrentPage(currentPage - 1) : null

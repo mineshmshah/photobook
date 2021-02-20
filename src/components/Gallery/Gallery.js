@@ -26,6 +26,7 @@ const options = {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 export const Gallery = ({photos, header}) => (
    <SRLWrapper options={options}>
      <Header>{header}</Header>
