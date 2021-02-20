@@ -15,5 +15,5 @@ background-color: #ecece6;
 `
 
 export const Container = styled.div`
-height:100%;
+height:80%;
 `

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Navbar = styled.div`
     width: 100%;
-    height: 60px;
+    height: 80px;
     background-color: #444141;
     border-bottom: 8px solid #cac9c9;
     display: grid;

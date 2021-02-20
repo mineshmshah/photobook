@@ -13,8 +13,8 @@ export const Pagination = ({currentPage, totalCount, setCurrentPage }) => {
 
       return(
         <PaginationContainer>
-            <Button onClick={goToPreviousPage} disabled={!!(currentPage + 1 <= 1)} >Previous</Button>
-            <Button onClick={goToNextPage} disabled={!!(currentPage +1 >= totalCount )}>Next</Button>
+            <Button onClick={goToPreviousPage} disabled={!!(currentPage + 1 <= 1)} > {'<'}</Button>
+            <Button onClick={goToNextPage} disabled={!!(currentPage +1 >= totalCount )}>{'>'}</Button>
         </PaginationContainer>
       )
 }
