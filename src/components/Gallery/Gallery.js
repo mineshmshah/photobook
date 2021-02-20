@@ -32,6 +32,7 @@ export const Gallery = ({photos, header}) => (
      <Header>{header}</Header>
          <GalleryContainer>
         {
+          // eslint-disable-next-line react/prop-types
           photos.map( (photo) => <Image key={photo} width="300px" 
         src={photo}
         />
