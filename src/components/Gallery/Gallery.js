@@ -1,6 +1,6 @@
 import React from 'react';
 import { SRLWrapper } from "simple-react-lightbox";
-import { Image, GalleryContainer } from './Gallery.styles'
+import { Image, GalleryContainer, Header } from './Gallery.styles'
 
 const options = {
   buttons: {
@@ -26,19 +26,19 @@ const options = {
   }
 };
 
-export const Gallery = () => (
-    <GalleryContainer>
+export const Gallery = ({photos, header}) => (
    <SRLWrapper options={options}>
-        <Image width="300px" 
-        src="https://drive.google.com/uc?export=view&id=1tLThjP4Bmhw9q6JS2PcTfxCpw574zPHL"
-        alt="Umbrella" 
+     <Header>{header}</Header>
+         <GalleryContainer>
+        {
+          photos.map( (photo) => <Image key={photo} width="300px" 
+        src={photo}
         />
-        <Image width="300px" 
-        src="https://drive.google.com/uc?export=view&id=1tLThjP4Bmhw9q6JS2PcTfxCpw574zPHL"
-        alt="Umbrella" 
-        />    
+          )
+        }   
+            </GalleryContainer>
+
         </SRLWrapper>
-    </GalleryContainer>
 
 )
 

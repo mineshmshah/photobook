@@ -1,14 +1,14 @@
 import { React } from 'react';
 import { Navigation } from './components/Navigation'
 import { Container } from './App.styles'
-import { Gallery } from './components/Gallery'
+import { Photobook } from './components/Photobook';
 
 export const App = () => <div>
-    <Container>
+<Container>
 <Navigation>
     Hi
 </Navigation>
-<Gallery />
-    </Container>
+<Photobook />
+</Container>
     
 </div>
